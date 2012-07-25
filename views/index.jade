@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .row
+    .twelve.columns
+        h1 LinkedIn Profile to Trello Card Generator
+        h6 Version: 1.0 Alpha
+        hr
+    .row
+      .eight.columns
+        h3 Enter the Person's Name
+        label(for="profid")
+        .row
+          .twelve.columns
+              .row.collapse
+                .ten.mobile-three.columns
+                  input(type='text', placeholder='ex: Fouad Matin', name="profid", id="profid")
+                .two.mobile-one.columns
+                  a.postfix.button(id="search") Search
+
+        .row
+          .twelve.columns
+            .profiles
+
+
+        
+      .three.columns
+        h2
+          script(type='in/Login')
+            p Well hello <?js= firstName ?>.
+
+  #clickAddTrello.reveal-modal
+    h2 Hey dude!
+      p.lead You're now authorized with Trello! Click "Add Card" again.
+      a.close-reveal-modal ×
+
+  #realAdd.reveal-modal
+    h2 Add Card
+      select.selectBoard
+
+      select.selectList
+
+      a.button(id="add") Add
+
+      a.close-reveal-modal ×
+

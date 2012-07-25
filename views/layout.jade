@@ -1,0 +1,30 @@
+!!!
+html
+  head
+    title LinkedIn Profile to Trello Card Generator
+    link(rel='shortcun icon', type='image/png', href='/favicon.png')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/app.css')
+    script(src='/javascripts/modernizr.foundation.js')
+    script(src='http://code.jquery.com/jquery-1.7.1.min.js')
+    script(src='/javascripts/jquery.foundation.reveal.js')
+    script(src='/javascripts/jquery.foundation.orbit.js')
+    script(src='/javascripts/jquery.foundation.navigation.js')
+    script(src='/javascripts/jquery.foundation.buttons.js')
+    script(src='/javascripts/jquery.foundation.tabs.js')
+    script(src='/javascripts/jquery.foundation.forms.js')
+    script(src='/javascripts/jquery.foundation.tooltips.js')
+    script(src='/javascripts/jquery.foundation.accordion.js')
+    script(src='/javascripts/jquery.placeholder.js')
+    script(src='/javascripts/jquery.foundation.alerts.js')
+    script(src='https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js')
+    script(src='https://api.trello.com/1/client.js?key=529941fa33ef8ee5eee461d65190f703')
+    script(type='text/javascript', src='http://platform.linkedin.com/in.js')
+      api_key: REPLACE_WITH_API_KEY
+      authorize: true
+      credentials_cookie: true
+    script(src='/javascripts/app.js')
+    // script(src='/javascripts/')
+
+  body
+    block content
