@@ -18,9 +18,6 @@
 
         $(document).foundationCustomForms();
 
-
-
-
         $(document).foundationTabs({callback:$.foundation.customForms.appendCustomMarkup});
 
         $(document).keyup(function(e){
@@ -47,8 +44,11 @@
             $('#add').removeClass('disabled');
             $('#add').hide();
             Trello.get('members/me/boards', function(boards) { 
+                console.log(boards);
                 for( board in boards) {
-                    $('.selectBoard').append('<option data-id="'+boards[board].id+'" class="board-'+boards[board].name+'">'+boards[board].name+'</option>');
+                    if(!boards[board].closed) {
+                        $('.selectBoard').append('<option data-id="'+boards[board].id+'" class="board-'+boards[board].name+'">'+boards[board].name+'</option>');
+                    }
                 }
                 $('#realAdd').reveal();
                 $('.selectBoard').change(function() {
@@ -76,7 +76,7 @@
                                             description += '**Profile Url**: '+person.publicProfileUrl+'\n\n';
                                             if (person.threeCurrentPositions){
                                                 for(pos in person.threeCurrentPositions.values) {
-                                                    description += '**Position**: '+person.threeCurrentPositions.values[pos].title+' at '+person.threeCurrentPositions.values[pos].company.name;
+                                                    description += '**Position**: '+person.threeCurrentPositions.values[pos].title+' at '+person.threeCurrentPositions.values[pos].company.name+'\n\n';
                                                 }
                                             }
                                             cardData.name = person.firstName + ' ' + person.lastName;
