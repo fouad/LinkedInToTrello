@@ -88,6 +88,7 @@
                                                     console.log(err);
                                                 }
                                                 console.log(card);
+                                                $('.close-reveal-modal').click();
                                             });
 
                                         });
