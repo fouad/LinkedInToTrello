@@ -132,7 +132,7 @@
                                 profile += '<img src="'+person.pictureUrl+'" />';
                             profile += '</div>';
                             profile += '<div class="ten columns">';
-                                profile += '<a href="'+person.publicProfileUrl+'"><h2>'+person.firstName+' '+person.lastName+'</h2></a>';
+                                profile += '<a href="'+person.publicProfileUrl+'" target="_blank"><h2>'+person.firstName+' '+person.lastName+'</h2></a>';
                             profile += '</div>';
                         profile += '</div>';
                         profile += '<div class="row">';
